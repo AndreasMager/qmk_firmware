@@ -1,19 +1,22 @@
 #include QMK_KEYBOARD_H
+#include "keymap_german.h"
 
 #define _NEO_1 0
 #define _LOWER 1
 #define _RAISE 2
 #define _NEO_3 3
 #define _NEO_4 4
+#define _NEO_D 5
 
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
 
 //#define NEO_4 LT(_NEO_4, TG(_NEO_4)
-// One Tap will toggle this layer hold the key for single use
+// 2 Tap will toggle this layer hold the key for single use
 #define NEO_4 TT(_NEO_4)
 
 #define NEO_3 MO(_NEO_3)
+#define NEO_D OSL(_NEO_D)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*    [_QWERTY] = LAYOUT_5x6(
@@ -31,11 +34,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9 , KC_0 ,KC_EQL ,
         KC_TAB , KC_X  , KC_V  , KC_L  , KC_C  , KC_W  ,                         KC_K  , KC_H  , KC_G  , KC_F , KC_Q ,KC_SCLN,
         KC_ESC_, KC_U  , KC_I  , KC_A  , KC_E  , KC_O  ,                         KC_S  , KC_R  , KC_T  , KC_D , KC_Y ,KC_QUOT,
-        KC_LALT,KC_LBRC,KC_RBRC, KC_Ä  , KC_P  , KC_Z  ,                         KC_B  , KC_M  ,KC_COMM,KC_DOT, KC_J ,KC_LALT,
-                         KC_BSPC,KC_DEL,                                                        KC_SLSH, NEO_3,
-                                         KC_LSFT,KC_ENT,                         KC_SPC ,KC_RSFT,
-                                         KC_LGUI,NEO_4 ,                         NEO_4  ,KC_RGUI,
-                                         KC_LCTL,KC_CAPS,                        KC_CAPS,KC_RCTL
+        KC_LALT,KC_LBRC,KC_RBRC,KC_CAPS, KC_P  , KC_Z  ,                         KC_B  , KC_M  ,KC_COMM,KC_DOT, KC_J ,KC_LALT,
+                         KC_BSPC,KC_DEL,                                                        KC_SLSH, RAISE,
+                                         KC_LSFT,KC_ENT,                         KC_SPC,KC_RSFT,
+                                         KC_LGUI,NEO_4 ,                         NEO_4 ,KC_RGUI,
+                                         KC_LCTL,NEO_3 ,                         NEO_3 ,KC_RCTL
     ),
 
     [_LOWER] = LAYOUT_5x6(
@@ -47,7 +50,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                 _______,_______,            _______,_______,
                                                 _______,_______,            _______,_______,
                                                 _______,_______,            _______,_______
-
     ),
 
 
@@ -65,33 +67,54 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* NEO_4: Cursor & Numpad
    */
   [_NEO_4] = LAYOUT_5x6(
-        _______,_______,_______  ,_______  ,_______ ,_______  ,                  _______, KC_TAB,KC_KP_SLASH,KC_ASTR,KC_KP_MINUS,_______,
-        _______,KC_PGUP,KC_BSPACE,KC_UP    ,KC_DEL  ,KC_PGDOWN,                  KC_RBRC, KC_P7 , KC_P8     , KC_P9 ,KC_PLUS    ,_______,
-        _______,KC_HOME,KC_LEFT  ,KC_DOWN  ,KC_RIGHT,KC_END   ,                  KC_RPRN, KC_P4 , KC_P5     , KC_P6 ,KC_KP_COMMA,KC_KP_DOT,
-        _______,KC_ESC ,KC_TAB   ,KC_INSERT,KC_ENTER,KC_UNDO  ,                  _______, KC_P1 , KC_P2     , KC_P3 ,KC_SCLN ,_______,
+        _______,_______,_______  ,_______  ,_______ ,_______  ,                  _______, KC_TAB,KC_PSLS,KC_PAST,KC_PMNS,_______,
+        _______,KC_PGUP,KC_BSPACE,KC_UP    ,KC_DEL  ,KC_PGDOWN,                  KC_RBRC, KC_P7 , KC_P8 , KC_P9 ,KC_PLUS,_______,
+        _______,KC_HOME,KC_LEFT  ,KC_DOWN  ,KC_RIGHT,KC_END   ,                  KC_RPRN, KC_P4 , KC_P5 , KC_P6 ,KC_PCMM,KC_KP_DOT,
+        _______,KC_ESC ,KC_TAB   ,KC_INSERT,KC_ENTER,KC_UNDO  ,                  _______, KC_P1 , KC_P2 , KC_P3 ,KC_SCLN,_______,
                                                 _______,KC_PSCR,            _______,_______,
                                                 _______,_______,            KC_0   ,_______,
                                                 _______,_______,            _______,_______,
                                                 _______,_______,            _______,_______
-
   ),
 
   [_NEO_3] = LAYOUT_5x6(
 
-        _______,_______,_______  ,_______  ,_______ ,_______  ,                  _______, _______,_______,_______,_______,_______,
-        _______,KC_UNDS,KC_LBRC  ,KC_RBRC  ,_______ ,_______  ,                  _______, _______,_______,_______,_______,_______,
-        KC_SLSH,_______,KC_LCBR  ,KC_RCBR  ,_______ ,_______  ,                  _______, _______,_______,_______,_______,_______,
-        _______,_______,_______  ,_______  ,_______ ,_______  ,                  _______, _______,_______,_______,_______,_______,
+        _______,_______,_______,_______,_______,_______,                  _______,_______,_______,_______,_______,_______,
+        _______,_______,KC_UNDS,KC_LBRC,KC_RBRC,KC_CIRC,                  KC_EXLM,KC_LT  ,KC_GT  ,KC_EQL ,KC_AMPR,_______,
+        _______,KC_BSLS,KC_SLSH,KC_LCBR,KC_RCBR,KC_ASTR,                  KC_QUES,KC_LPRN,KC_RPRN,KC_MINS,KC_COLN,_______,
+        _______,KC_HASH,KC_DLR ,KC_PIPE,KC_TILD,KC_GRV ,                  KC_PLUS,KC_PERC,KC_DQUO,KC_QUOT,KC_SCLN,_______,
                                                  _______,_______,            _______,_______,
                                                  _______,_______,            _______,_______,
                                                  _______,_______,            _______,_______,
                                                  _______,_______,            _______,_______
+          ),
+ 
+  [_NEO_3] = LAYOUT_5x6(
 
+        _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
+        _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
+        _______,DE_UE,DE_AE,_______,_______,DE_OE,                  DE_SS, _______,_______,_______,_______,_______,
+        _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
+                                       _______,_______,                 _______,_______,
+                                           _______,_______,          _______,_______,
+                                           _______,_______,          _______,_______,
+                                           _______,_______,          _______,_______
+
+          )
+/*
+ *
+    [_NEO_3] = LAYOUT_5x6(
+
+        _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
+        _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
+        _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
+        _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
+                                       _______,_______,                 _______,_______,
+                                           _______,_______,          _______,_______,
+                                           _______,_______,          _______,_______,
+                                           _______,_______,          _______,_______
 
           )
 
-/*
- *
- *
  */
 };
