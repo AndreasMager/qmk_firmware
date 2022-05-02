@@ -59,7 +59,6 @@ const uint32_t PROGMEM unicode_map[] = {
 
         KC_ESC , NEO_U , NEO_I , NEO_A , NEO_E , KC_O  ,                         KC_S  , NEO_N , NEO_R , NEO_T, NEO_D , KC_Y ,
  */
-#define COMBO_COUNT 1
 
 const uint16_t PROGMEM layer4_combo[] = {NEO_4, NEO_4, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
@@ -139,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                  _______,_______,            _______,_______,
                                                  _______,_______,            _______,_______
           ),
- 
+
   [_NEO_D] = LAYOUT_5x6(
 
         _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
