@@ -13,10 +13,10 @@
 
 //#define NEO_4 LT(_NEO_4, TG(_NEO_4)
 // 2 Tap will toggle this layer hold the key for single use
-#define NEO_4 TT(_NEO_4)
+#define NEO_4 MO(_NEO_4)
 
 #define NEO_3 MO(_NEO_3)
-#define NEO_D OSL(_NEO_D)
+#define NEO_DIA OSL(_NEO_D)
 
 enum unicode_names {
   UE,
@@ -47,9 +47,30 @@ const uint32_t PROGMEM unicode_map[] = {
 #define DE_OE XP(oe,OE)
 #define DE_SS XP(ss,SS)
 #define DE_EURO X(euro)
+/*
+#define NEO_E LT(NEO_4,KC_E)
+#define NEO_N LT(NEO_4,KC_N)
+#define NEO_A LT(NEO_3,KC_A)
+#define NEO_R LT(NEO_3,KC_R)
+#define NEO_I LCTL_T(KC_I)
+#define NEO_T RCTL_T(KC_T)
+#define NEO_U LALT_T(KC_U)
+#define NEO_D RALT_T(KC_D)
+
+        KC_ESC , NEO_U , NEO_I , NEO_A , NEO_E , KC_O  ,                         KC_S  , NEO_N , NEO_R , NEO_T, NEO_D , KC_Y ,
+ */
+#define COMBO_COUNT 1
+
+const uint16_t PROGMEM layer4_combo[] = {NEO_4, NEO_4, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+  COMBO(layer4_combo, TG(_NEO_4))
+};
+
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-/*    [_QWERTY] = LAYOUT_5x6(
+/*
+   [_QWERTY] = LAYOUT_5x6(
         KC_GRV , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9  , KC_0  ,KC_EQL ,
         KC_TAB , KC_Q  , KC_W  , KC_E  , KC_R  , KC_T  ,                         KC_Y  , KC_U  , KC_I  , KC_O  , KC_P  ,KC_RBRC,
         KC_LBRC, KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                         KC_H  , KC_J  , KC_K  , KC_L  ,KC_SCLN,KC_QUOT,
@@ -63,8 +84,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NEO_1] = LAYOUT_5x6(
         KC_GRV , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9 , KC_0 ,KC_EQL ,
         KC_TAB , KC_X  , KC_V  , KC_L  , KC_C  , KC_W  ,                         KC_K  , KC_H  , KC_G  , KC_F , KC_Q ,KC_SCLN,
-        KC_ESC , KC_U  , KC_I  , KC_A  , KC_E  , KC_O  ,                         KC_S  , KC_N  , KC_R  , KC_T  , KC_D , KC_Y ,
-        KC_LALT,KC_LBRC,KC_RBRC, NEO_D , KC_P  , KC_Z  ,                         KC_B  , KC_M  ,KC_COMM,KC_DOT, KC_J ,KC_LALT,
+        KC_ESC , KC_U  , KC_I  , KC_A  , KC_E  , KC_O  ,                         KC_S  , KC_N  , KC_R  , KC_T , KC_D , KC_Y ,
+        KC_LALT,KC_LBRC,KC_RBRC,NEO_DIA, KC_P  , KC_Z  ,                         KC_B  , KC_M  ,KC_COMM,KC_DOT, KC_J ,KC_LALT,
                          KC_BSPC,KC_DEL,                                                        KC_SLSH, RAISE,
                                          KC_LSFT,KC_ENT,                         KC_SPC,KC_RSFT,
                                          KC_LGUI,NEO_3 ,                         NEO_3 ,KC_RGUI,
