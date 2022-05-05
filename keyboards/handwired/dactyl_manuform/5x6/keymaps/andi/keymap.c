@@ -17,7 +17,7 @@
 
 #define NEO_3 MO(_NEO_3)
 #define NEO_DIA OSL(_NEO_D)
-
+/*
 enum unicode_names {
   UE,
   AE,
@@ -47,7 +47,23 @@ const uint32_t PROGMEM unicode_map[] = {
 #define DE_OE XP(oe,OE)
 #define DE_SS XP(ss,SS)
 #define DE_EURO X(euro)
+*/
+
+#define DE_UE RALT(KC_Y)
+#define DE_AE RALT(KC_Q)
+#define DE_OE RALT(KC_P)
+#define DE_SS RALT(KC_S)
+#define DE_EURO RALT(KC_5)
+
+#define MLALT LALT_T(KC_LBRC)
+#define MRALT LALT_T(KC_RBRC)
+
+#define SNEO4 LT(_NEO_4, KC_SPC)
+#define ENEO4 LT(_NEO_4, KC_ENT)
+
 /*
+ *
+ *
 #define NEO_E LT(NEO_4,KC_E)
 #define NEO_N LT(NEO_4,KC_N)
 #define NEO_A LT(NEO_3,KC_A)
@@ -60,7 +76,7 @@ const uint32_t PROGMEM unicode_map[] = {
         KC_ESC , NEO_U , NEO_I , NEO_A , NEO_E , KC_O  ,                         KC_S  , NEO_N , NEO_R , NEO_T, NEO_D , KC_Y ,
  */
 
-const uint16_t PROGMEM layer4_combo[] = {NEO_4, NEO_4, COMBO_END};
+const uint16_t PROGMEM layer4_combo[] = {SNEO4, ENEO4, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(layer4_combo, TG(_NEO_4))
 };
@@ -83,12 +99,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NEO_1] = LAYOUT_5x6(
         KC_GRV , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9 , KC_0 ,KC_EQL ,
         KC_TAB , KC_X  , KC_V  , KC_L  , KC_C  , KC_W  ,                         KC_K  , KC_H  , KC_G  , KC_F , KC_Q ,KC_SCLN,
-        KC_ESC , KC_U  , KC_I  , KC_A  , KC_E  , KC_O  ,                         KC_S  , KC_N  , KC_R  , KC_T , KC_D , KC_Y ,
-        KC_LALT,KC_LBRC,KC_RBRC,NEO_DIA, KC_P  , KC_Z  ,                         KC_B  , KC_M  ,KC_COMM,KC_DOT, KC_J ,KC_LALT,
-                         KC_BSPC,KC_DEL,                                                        KC_SLSH, RAISE,
-                                         KC_LSFT,KC_ENT,                         KC_SPC,KC_RSFT,
-                                         KC_LGUI,NEO_3 ,                         NEO_3 ,KC_RGUI,
-                                         KC_LCTL,NEO_4 ,                         NEO_4 ,KC_RCTL
+        KC_ESC , KC_U  , KC_I  , KC_A  , KC_E  , KC_O  ,                         KC_S  , KC_N  , KC_R  , KC_T , KC_D ,KC_SLSH,
+        MLALT  ,KC_QUOT,KC_Y   ,NEO_DIA, KC_P  , KC_Z  ,                         KC_B  , KC_M  ,KC_COMM,KC_DOT, KC_J ,MRALT  ,
+                         _______,_______,                                                    _______, RAISE,
+                                         KC_LSFT,ENEO4  ,                        SNEO4  ,KC_RSFT,
+                                         KC_LGUI,NEO_3  ,                        NEO_3  ,KC_RGUI,
+                                         KC_BSPC,KC_LCTL,                        KC_RCTL,KC_DEL
     ),
 
     [_LOWER] = LAYOUT_5x6(
@@ -105,10 +121,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_RAISE] = LAYOUT_5x6(
           KC_F12 , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 ,                        KC_F6  , KC_F7 , KC_F8 , KC_F9 ,KC_F10 ,KC_F11 ,
-          _______,_______,_______,_______,_______,KC_LBRC,                        KC_RBRC,_______,KC_NLCK,KC_INS ,KC_SLCK,KC_MUTE,
-          _______,KC_LEFT,KC_UP  ,KC_DOWN,KC_RGHT,KC_LPRN,                        KC_RPRN,KC_MPRV,KC_MPLY,KC_MNXT,_______,KC_VOLU,
+          _______,_______,_______,_______,_______,_______,                        _______,_______,KC_NLCK,KC_INS ,KC_SLCK,KC_MUTE,
+          _______,KC_LEFT,KC_UP  ,KC_DOWN,KC_RGHT,_______,                        _______,KC_MPRV,KC_MPLY,KC_MNXT,_______,KC_VOLU,
           _______,_______,_______,_______,_______,_______,                        _______,_______,_______,_______,_______,KC_VOLD,
-                                                  _______,_______,            KC_EQL ,_______,
+                                                  _______,_______,            _______,_______,
                                                   _______,_______,            _______,_______,
                                                   _______,_______,            _______,_______,
                                                   _______,_______,            _______,_______
@@ -145,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
         _______,DE_UE  ,_______,DE_AE  ,DE_EURO,DE_OE  ,                  DE_SS  , _______,_______,_______,_______,_______,
         _______,_______,_______,_______,_______,_______,                  _______, _______,_______,_______,_______,_______,
-                                       _______,_______,                 _______,_______,
+                                      _______,_______,                 _______,_______,
                                            _______,_______,          _______,_______,
                                            _______,_______,          _______,_______,
                                            _______,_______,          _______,_______
