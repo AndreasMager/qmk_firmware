@@ -24,11 +24,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define TAPPING_TERM 250
 
-//#define TAPPING_TOGGLE 2
+#define TAPPING_TOGGLE 3
 //#define UNICODE_SELECTED_MODES UC_LNX
 
 //#define EE_HANDS
-
-#define COMBO_COUNT 1
-//#define COMBO_LEN 1
-
+#define ONESHOT_TAP_TOGGLE 3
+#define COMBO_COUNT 0
+//#define COMBO_LEN 0
