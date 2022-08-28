@@ -58,6 +58,7 @@ mkShell {
       pkgsCross.avr.buildPackages.gcc8
       avrlibc
       avrdude
+      python310Packages.pyserial
     ]
     ++ lib.optional arm [ gcc-arm-embedded ]
     ++ lib.optional teensy [ teensy-loader-cli ];
