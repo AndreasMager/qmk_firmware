@@ -49,8 +49,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* RGB settings. */
 #define RGBLED_NUM 62
-#define RGBLED_SPLIT \
-    { 31, 31 }
+#define RGBLED_SPLIT { 31, 31 }
+//#define SPLIT_TRANSPORT_MIRROR
 
 /* RGB matrix support. */
 #ifdef RGB_MATRIX_ENABLE
@@ -68,4 +68,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #if defined(RGB_MATRIX_KEYPRESSES) || defined(RGB_MATRIX_KEYRELEASES)
   #define ENABLE_RGB_MATRIX_SOLID_REACTIVE
+//#define ENABLE_LED_MATRIX_SOLID_REACTIVE_SIMPLE
+//#define ENABLE_LED_MATRIX_SOLID_REACTIVE_NEXUS
+  //#define ENABLE_LED_MATRIX_SOLID_SPLASH
+  //#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE needs positions
 #endif

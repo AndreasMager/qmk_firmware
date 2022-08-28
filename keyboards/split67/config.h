@@ -22,5 +22,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+#include "config_common.h"
+
+#define PRODUCT_ID 0x3536
+#define DEVICE_VER 0x0001
+#define PRODUCT    Dactyl-Manuform (5x6)
+
+/* key matrix size */
+// Rows are doubled-up
+#define MATRIX_ROWS 12
+#define MATRIX_COLS 6
 
 

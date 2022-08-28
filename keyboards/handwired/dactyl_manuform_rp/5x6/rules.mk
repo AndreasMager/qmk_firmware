@@ -5,7 +5,7 @@ MCU = RP2040
 BOOTLOADER = rp2040
 
 # RP2040-specific options
-ALLOW_WARNINGS = yes
+#ALLOW_WARNINGS = yes
 PICO_INTRINSICS_ENABLED = no # ATM Unsupported by ChibiOS.
 
 # Build Options
@@ -27,6 +27,7 @@ DEBOUNCE_TYPE=sym_eager_pk
 #UNICODEMAP_ENABLE = yes
 
 COMBO_ENABLE = no
+
 SERIAL_DRIVER = vendor
 WS2812_DRIVER = vendor
 

@@ -11,8 +11,6 @@
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
 
-//#define NEO_4 LT(_NEO_4, TG(_NEO_4)
-// 2 Tap will toggle this layer hold the key for single use
 #define NEO_4 MO(_NEO_4)
 
 #define DE_UE RALT(KC_Y)
@@ -77,10 +75,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_COPY, KC_V  , KC_P  , KC_L  , KC_C  , KC_F  ,                         KC_K  , KC_U  , KC_O  , KC_Y , KC_J ,KC_FIND,
         KC_PSTE, KC_R  , KC_T  , KC_N  , KC_S  , KC_D  ,                        KC_QUOT, KC_A  , KC_E  , KC_I , KC_H ,KC_NO,
         KC_UNDO, KC_Z  , KC_B  , KC_M  , KC_G  , KC_W  ,                         KC_X  ,KC_DOT ,KC_MINS,KC_COMM,KC_Q ,KC_AGIN,
-                         KC_TAB,KC_ENT,                                                    KC_CAPS, RAISE,
+                         OSM(MOD_LCTL) , OSM(MOD_LALT),                                KC_CAPS, KC_APP,
                                          OSM(MOD_LSFT),OSL(_LOWER),              KC_SPC, DIA  ,
                                          KC_ESC ,LNEO4  ,                        RNEO4 ,KC_TAB,
-                                         KC_O  ,                                 KC_S
+                                         OSM(MOD_LGUI)  ,                                 KC_S
     ),
 
     [_DIA] = LAYOUT_5x6(
@@ -121,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* NEO_4: Cursor & Numpad
    */
   [_NEO_4] = LAYOUT_5x6(
-        QK_BOOT,_______,_______  ,_______,_______ ,_______ ,                  _______, _______,_______,_______,_______,QK_BOOT,
+        QK_BOOT,_______,_______  ,_______,_______ ,_______ ,                  _______, _______,_______,RGB_VAI,RGB_SAI,QK_BOOT,
         _______,KC_BSPC,KC_ESC   ,KC_INS ,KC_DEL  ,_______ ,                  _______, _______,_______,_______,_______,RGB_TOG,
         _______,KC_LEFT,KC_DOWN  ,KC_UP  ,KC_RIGHT,_______ ,                  _______,KC_WWW_BACK,KC_WWW_FAVORITES,KC_WWW_REFRESH,KC_WWW_FORWARD,RGB_MOD,
         _______,KC_HOME,KC_PGDOWN,KC_PGUP,KC_END  ,_______ ,                  _______, _______,_______,_______,_______,RGB_HUI,
