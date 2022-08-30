@@ -20,3 +20,5 @@ COMBO_ENABLE = no
 
 OLED_ENABLE = yes           # Display Feature
 OLED_DRIVER = SSD1306       # OLED SSD1306 128x32
+
+WPM_ENABLE = yes
