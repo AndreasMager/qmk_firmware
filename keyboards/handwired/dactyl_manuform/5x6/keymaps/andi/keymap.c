@@ -43,8 +43,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_OLALT, KC_Z  , KC_B  , KC_M  , KC_G  , KC_W  ,                         KC_X  ,KC_DOT ,KC_MINS,KC_COMM,KC_Q ,KC_OLALT,
                        KC_OLCTL,KC_OLGUI,                                                       KC_ORGUI,KC_ORCTL,
                                        KC_OLSFT,OSL(_LOWER),                    KC_SPC ,KC_ORSFT,
-                                       KC_ESC  ,KC_OCAG,                       KC_RAISE,KC_TAB ,
-                                       KC_RAISO,KC_NO  ,                         KC_NO ,KC_APP
+                                       KC_ESC  ,KC_RAISO,                      KC_RAISE,OSL(_LOWER),
+                                       KC_OCAG,KC_NO  ,                         KC_NO ,KC_APP
     ),
 
     [_QWERTY] = LAYOUT_5x6(
@@ -54,8 +54,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_OLALT, KC_Z  , KC_X  , KC_C  , KC_V  , KC_B  ,                         KC_N  , KC_M  ,KC_COMM,KC_DOT ,KC_SLSH,KC_ORALT,
                        KC_OLCTL,KC_ORGUI,                                                       KC_ORGUI,KC_ORCTL,
                                        KC_OLSFT,OSL(_LOWER),                    KC_SPC ,KC_ORSFT,
-                                       KC_ESC  ,KC_OCAG,                       KC_RAISE,KC_TAB ,
-                                       KC_RAISE,KC_NO  ,                         KC_NO ,KC_APP
+                                       KC_ESC ,KC_RAISE,                      KC_RAISE,OSL(_LOWER),
+                                        KC_OCAG,KC_NO  ,                         KC_NO ,KC_APP
     ),
 
     [_LOWER] = LAYOUT_5x6(
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,KC_CIRC,KC_RBRC,KC_RCBR,KC_RPRN,KC_DLR,                   KC_0   ,KC_1   , KC_2  , KC_3  ,KC_EQL ,_______,
                         _______,_______,                                                  _______,_______,
                                         _______,_______,                  KC_ENT ,_______,
-                                        _______,_______,                  _______,_______,
+                                        KC_TAB ,_______,                  _______,_______,
                                         _______,_______,                  _______,_______
     ),
 
@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         QK_BOOT,_______,_______  ,_______,_______ ,_______,                  KC_QWER,KC_MAG  ,_______,RGB_VAI,RGB_SAI,QK_BOOT,
         _______,KC_BSPC,C(KC_BSPC),C(KC_DEL),KC_DEL,KC_INS,                  KC_BSLS, DE_UE  , DE_OE ,_______,_______,RGB_TOG,
         _______,KC_LEFT,KC_DOWN  ,KC_UP  ,KC_RIGHT,KC_ESC ,                  _______, DE_AE  ,DE_EURO,KC_EXLM,DE_SS  ,RGB_MOD,
-        _______,KC_HOME,KC_PGDOWN,KC_PGUP,KC_END  ,_______,                  _______,KC_COLN ,KC_TILD,KC_SCLN,KC_QUES,RGB_HUI,
+        _______,KC_HOME,KC_PGDOWN,KC_PGUP,KC_END  ,KC_TAB ,                  _______,KC_COLN ,KC_TILD,KC_SCLN,KC_QUES,RGB_HUI,
                         _______  ,_______,                                                    _______,_______,
                                           _______ ,_______,                  _______,_______,
                                           _______ ,_______,                  _______,_______,
