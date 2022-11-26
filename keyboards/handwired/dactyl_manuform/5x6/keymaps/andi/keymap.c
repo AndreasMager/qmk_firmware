@@ -71,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RAISE] = LAYOUT_5x6(
         QK_BOOT,_______,_______  ,_______,_______ ,_______,                  KC_QWER,KC_MAG  ,_______,RGB_VAI,RGB_SAI,QK_BOOT,
-        _______,KC_BSPC,C(KC_BSPC),C(KC_DEL),KC_DEL,KC_INS,                  KC_BSLS, DE_UE  , DE_OE ,_______,_______,RGB_TOG,
-        _______,KC_LEFT,KC_DOWN  ,KC_UP  ,KC_RIGHT,KC_ESC ,                  _______, DE_AE  ,DE_EURO,KC_EXLM,KC_QUES,RGB_MOD,
-        _______,KC_HOME,KC_PGDOWN,KC_PGUP,KC_END  ,KC_TAB ,                  _______,KC_COLN ,KC_TILD,KC_SCLN,DE_SS  ,RGB_HUI,
+        _______,KC_BSPC,C(KC_BSPC),C(KC_DEL),KC_DEL,KC_ESC,                  KC_BSLS, DE_UE  , DE_OE ,_______,_______,RGB_TOG,
+        _______,KC_LEFT,KC_DOWN  ,KC_UP  ,KC_RIGHT,KC_TAB ,                  _______, DE_AE  ,DE_EURO,KC_EXLM,KC_QUES,RGB_MOD,
+        _______,KC_HOME,KC_PGDOWN,KC_PGUP,KC_END  ,KC_INS ,                  _______,KC_COLN ,KC_TILD,KC_SCLN,DE_SS  ,RGB_HUI,
                         _______  ,_______,                                                    _______,_______,
                                           _______ ,_______,                  _______,_______,
                                           _______ ,_______,                  _______,_______,
