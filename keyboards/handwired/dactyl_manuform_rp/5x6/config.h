@@ -18,8 +18,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 12
@@ -49,14 +47,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* RGB settings. */
 #define RGBLED_NUM 62
-#define RGBLED_SPLIT { 31, 31 }
 //#define SPLIT_TRANSPORT_MIRROR
-
+#define RGB_MATRIX_LED_COUNT 62
 /* RGB matrix support. */
 #ifdef RGB_MATRIX_ENABLE
 //#    define SPLIT_TRANSPORT_MIRROR
 #define DRIVER_LED_TOTAL RGBLED_NUM
-#define RGB_MATRIX_SPLIT RGBLED_SPLIT
+#define RGB_MATRIX_SPLIT { 31, 31 }
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 50
 #define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
