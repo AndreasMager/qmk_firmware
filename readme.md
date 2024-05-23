@@ -1,5 +1,8 @@
 # Andis flash commands
+nix-shell shell.nix
+
 make git-submodule
+
 qmk flash -kb handwired/dactyl_manuform/5x6 --keymap andi -bl dfu-split-left
 
 qmk flash -kb handwired/dactyl_manuform_rp/5x6_2_5 --keymap default
