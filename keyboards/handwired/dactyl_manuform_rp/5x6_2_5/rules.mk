@@ -5,6 +5,8 @@ BOOTLOADER = rp2040
 # Bootloader selection
 #BOOTLOADER = caterina
 
+SERIAL_DRIVER = vendor
+#
 # Build Options
 #   change yes to no to disable
 #

@@ -19,6 +19,6 @@ DEBOUNCE_TYPE=sym_eager_pk
 COMBO_ENABLE = no
 
 OLED_ENABLE = yes           # Display Feature
-OLED_DRIVER = SSD1306       # OLED SSD1306 128x32
+OLED_DRIVER = ssd1306       # OLED SSD1306 128x32
 
 WPM_ENABLE = yes

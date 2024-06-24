@@ -5,6 +5,7 @@
 #define _QWERTY 1
 #define _LOWER  2
 #define _RAISE  3
+#define _DIA  4
 
 #define KC_RAISE MO(_RAISE)
 #define KC_RAISO OSL(_RAISE)
@@ -73,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         QK_BOOT,_______,_______  ,_______,_______ ,_______,                  KC_QWER,KC_MAG  ,_______,RGB_VAI,RGB_SAI,QK_BOOT,
         _______,KC_BSPC,C(KC_BSPC),C(KC_DEL),KC_DEL,KC_ESC,                  KC_BSLS, DE_UE  , DE_OE ,_______,_______,RGB_TOG,
         _______,KC_LEFT,KC_DOWN  ,KC_UP  ,KC_RIGHT,KC_TAB ,                  _______, DE_AE  ,DE_EURO,KC_EXLM,KC_QUES,RGB_MOD,
-        _______,KC_HOME,KC_PGDOWN,KC_PGUP,KC_END  ,KC_INS ,                  _______,KC_COLN ,KC_TILD,KC_SCLN,DE_SS  ,RGB_HUI,
+        _______,KC_HOME,KC_PGDN  ,KC_PGUP,KC_END  ,KC_INS ,                  _______,KC_COLN ,KC_TILD,KC_SCLN,DE_SS  ,RGB_HUI,
                         _______  ,_______,                                                    _______,_______,
                                           _______ ,_______,                  _______,_______,
                                           _______ ,_______,                  _______,_______,
