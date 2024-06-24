@@ -22,13 +22,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MASTER_LEFT
 #define MASTER_RIGHT
 
-#define TAPPING_TERM 250
+//#define TAPPING_TERM 250
 
-#define TAPPING_TOGGLE 3
+//define TAPPING_TOGGLE 3
 //#define UNICODE_SELECTED_MODES UC_LNX
 
 //#define EE_HANDS
-#define ONESHOT_TAP_TOGGLE 3
+//#define ONESHOT_TAP_TOGGLE 3
 #define COMBO_COUNT 0
 //#define COMBO_LEN 0
 

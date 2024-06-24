@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION ROW2COL
 
 // WS2812 RGB LED strip input and number of LEDs
-#define RGB_DI_PIN GP28
+#define WS2812_DI_PIN GP28
 
 //#define USE_SERIAL
 
@@ -56,7 +56,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_SPLIT { 31, 31 }
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 50
 #define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
+#define RGB_MATRIX_SLEEP
 #define RGB_MATRIX_KEYPRESSES
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_TRIGGER_ON_KEYDOWN
