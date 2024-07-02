@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
+//#include "config_common.h"
 
 /* key matrix size */
 // Rows are doubled-up
@@ -43,7 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* serial.c configuration for split keyboard */
 #define SOFT_SERIAL_PIN D2
-// #define SOFT_SERIAL_PIN D3
 #define SERIAL_USE_MULTI_TRANSACTION
 
 #define SPLIT_WPM_ENABLE
