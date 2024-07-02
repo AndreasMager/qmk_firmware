@@ -40,22 +40,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CUT , KC_F1 , KC_F2 ,LGUI_T(KC_F3),KC_F4, KC_F5 ,                     KC_F6 , KC_F7 ,RGUI_T(KC_F8),RALT_T(KC_F9),KC_F10,KC_PSCR,
         KC_CAPS, KC_V  , KC_P  , KC_L  , KC_C  , KC_F  ,                         KC_K  , KC_U  , KC_O  , KC_Y , KC_J ,KC_FIND,
         KC_PSTE, KC_R  , KC_T  , KC_N  , KC_S  , KC_D  ,                        KC_QUOT, KC_A  , KC_E  , KC_I , KC_H ,KC_F21 ,
-       KC_OLALT, KC_Z  , KC_B  , KC_M  , KC_G  , KC_W  ,                         KC_X  ,KC_DOT ,KC_MINS,KC_COMM,KC_Q ,KC_OLALT,
-                       KC_OLCTL,KC_OLGUI,                                                       KC_ORGUI,KC_ORCTL,
+        KC_APP , KC_Z  , KC_B  , KC_M  , KC_G  , KC_W  ,                         KC_X  ,KC_DOT ,KC_MINS,KC_COMM,KC_Q ,_______,
+                       KC_OLCTL,KC_OLALT,                                                      KC_ORALT,KC_ORCTL,
                                        KC_OLSFT,OSL(_LOWER),                    KC_SPC ,KC_ORSFT,
                                        KC_ESC  ,KC_RAISO,                      KC_RAISE,OSL(_LOWER),
-                                       KC_OCAG ,                                        KC_APP
+                                       KC_OLGUI,                                        KC_ORGUI
     ),
 
     [_QWERTY] = LAYOUT_5x6(
         KC_GRV , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9  , KC_0  ,KC_EQL ,
         KC_TAB , KC_Q  , KC_W  , KC_E  , KC_R  , KC_T  ,                         KC_Y  , KC_U  , KC_I  , KC_O  , KC_P  ,KC_RBRC,
         KC_LBRC, KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                         KC_H  , KC_J  , KC_K  , KC_L  ,KC_SCLN,KC_QUOT,
-       KC_OLALT, KC_Z  , KC_X  , KC_C  , KC_V  , KC_B  ,                         KC_N  , KC_M  ,KC_COMM,KC_DOT ,KC_SLSH,KC_ORALT,
-                       KC_OLCTL,KC_ORGUI,                                                       KC_ORGUI,KC_ORCTL,
+        KC_APP , KC_Z  , KC_X  , KC_C  , KC_V  , KC_B  ,                         KC_N  , KC_M  ,KC_COMM,KC_DOT ,KC_SLSH,_______,
+                       KC_OLCTL,KC_OLALT,                                                      KC_ORALT,KC_ORCTL,
                                        KC_OLSFT,OSL(_LOWER),                    KC_SPC ,KC_ORSFT,
                                         KC_ESC ,KC_RAISE,                      KC_RAISE,OSL(_LOWER),
-                                        KC_OCAG,                                        KC_APP
+                                       KC_OLGUI,                                        KC_ORGUI
     ),
 
     [_LOWER] = LAYOUT_5x6(
