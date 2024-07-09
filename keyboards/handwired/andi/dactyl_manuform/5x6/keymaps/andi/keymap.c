@@ -1,5 +1,40 @@
 #include QMK_KEYBOARD_H
 
+//#include "keymap_german.h"
+
+#define _MAG    0
+#define _QWERTY 1
+#define _LOWER  2
+#define _RAISE  3
+
+#define KC_RAISE MO(_RAISE)
+#define KC_RAISO OSL(_RAISE)
+
+#define KC_LOWER MO(_LOWER)
+
+#define DE_UE RALT(KC_Y)
+#define DE_AE RALT(KC_Q)
+#define DE_OE RALT(KC_P)
+#define DE_SS RALT(KC_S)
+#define DE_GRAD RALT(KC_COLN)
+#define DE_EURO RALT(KC_5)
+
+#define KC_MAG DF(_MAG)
+#define KC_QWER DF(_QWERTY)
+#define KC_OLCTL OSM(MOD_LCTL)
+#define KC_ORCTL OSM(MOD_RCTL)
+
+#define KC_OLSFT OSM(MOD_LSFT)
+#define KC_ORSFT OSM(MOD_RSFT)
+
+#define KC_OLALT OSM(MOD_LALT)
+#define KC_ORALT OSM(MOD_LALT)
+
+#define KC_OLGUI OSM(MOD_LGUI)
+#define KC_ORGUI OSM(MOD_RGUI)
+
+#define KC_OCAG OSM(MOD_LCTL|MOD_LALT|MOD_LGUI)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_MAG] = LAYOUT_5x6(
